@@ -1,0 +1,75 @@
+/* BULLET LIST */
+/*
+
+
+*/
+.bullet-list-block.desktop {
+  main {
+    > article {
+      flex-direction: row;
+
+    }
+  }
+}
+.bullet-list-block.mobile {
+  main {
+    > article {
+      flex-direction: column;
+      > i {
+        width: 100%;
+      }
+      > section {
+        h3 {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.bullet-list-block {
+  header {
+   > h2 {
+    margin-bottom: 0 !important;
+  }
+}
+  main {
+    > article {
+      ul,
+      ol {
+        padding-left: 0;
+        li::before {
+          display: none;
+          content: "";
+        }
+        li {
+          display: flex;
+          flex-direction: row;
+          line-height: 1.5em;
+          i::before {
+            line-height: 1.5em;
+            display: inline-flex;
+            margin-right: 0.5em;
+          }
+          i {
+            color: #00667D;
+          }
+        }
+      }
+      display: flex;
+      justify-content: left;
+      align-items: flex-start;
+      > section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        h3 {
+          text-align: left;
+          font-size: 1.9em;
+          margin-bottom: 1em;
+        }
+      }
+    }
+  }
+}

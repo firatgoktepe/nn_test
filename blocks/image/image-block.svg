@@ -1,0 +1,20 @@
+<svg version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<linearGradient id="linearGradient843" x1=".8499" x2="24.85" y1="-4.051" y2="19.95" gradientTransform="translate(-.8499 4.051)" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#001c35" offset="0"/>
+			<stop stop-color="#00325b" offset="1"/>
+		</linearGradient>
+	</defs>
+	<rect x="2.496e-9" width="24" height="24" ry="0" fill="url(#linearGradient843)" style="paint-order:normal"/>
+	<g fill="#fff">
+		<rect x="3.774" y="4.064" width="16.35" height="10.08" ry="1.375" stroke-width="1.436" style="paint-order:normal"/>
+		<rect x="3.774" y="15.3" width="16.35" height="1.736" ry=".237" stroke-width=".5959" style="paint-order:normal"/>
+		<rect x="3.876" y="18.2" width="16.35" height="1.736" ry=".237" stroke-width=".5959" style="paint-order:normal"/>
+	</g>
+	<g transform="translate(-.2079 .03278)">
+		<g transform="matrix(1.01 0 0 1.072 -.2183 -.9076)" fill="#002e54" stroke="#002b4e" stroke-linejoin="round">
+			<path d="m5.629 12.25 2.927-5.886 2.872 5.666 3.904-1.305 3.534 1.52z" stroke-width="1px"/>
+			<ellipse cx="16.55" cy="7.848" rx="1.17" ry="1.065" stroke-linecap="square" stroke-width="1.294"/>
+		</g>
+	</g>
+</svg>

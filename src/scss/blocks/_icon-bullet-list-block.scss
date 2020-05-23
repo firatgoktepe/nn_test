@@ -1,0 +1,56 @@
+/* ICON BULLET LIST */
+/*
+<main class="width-max">
+  <article>
+    <i class="las la-award"></i>
+    <section>
+      <h3>Vi överpresterar för att vi köper bolag istället för aktiekurser</h3>
+      <div class="wysiwyg">
+      *** WYSIWYG
+      </div>
+    </section>
+  </article>
+</main>
+*/
+
+.icon-bullet-list-block.desktop {
+  > main {
+    column-gap: pix($block-padding / 2);
+    grid-template-columns: auto auto;
+    > div {
+      margin-right: pix($block-padding);
+    }
+  }
+}
+.icon-bullet-list-block.mobile {
+  > main {
+    > div {
+      width: 100%;
+    }
+    > section {
+      h3 {
+        text-align: center;
+      }
+    }
+  }
+}
+.icon-bullet-list-block {
+  main {
+    display: grid;
+    row-gap: pix($block-padding / 2);
+    > div {
+      font-size: pix($base-spacing * 6);
+    }
+    > section {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      h3 {
+        text-align: left;
+        font-size: 1.9em;
+        //margin-bottom: 1em;
+      }
+    }
+  }
+}

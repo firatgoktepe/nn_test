@@ -1,0 +1,32 @@
+/* FONTS */
+/*
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:300,400,600,800&display=swap");
+
+$font-family-title: "Open Sans", sans-serif;
+$font-family-subtitle: "Open Sans", sans-serif;
+$font-family-text: "Open Sans", sans-serif;
+$font-family-special: "Open Sans Condensed", sans-serif;
+
+$font-weight-light: 200;
+$font-weight-regular: 400;
+$font-weight-medium: 600;
+$font-weight-bold: 800;
+
+@mixin font-awesome-brand {
+  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin font-awesome-free {
+  font-family: "Font Awesome 5 Pro";
+  font-style: normal;
+  font-weight: 900;
+}
+
+@mixin font-awesome-regular {
+  font-family: "Font Awesome 5 Pro";
+  font-style: normal;
+  font-weight: 400;
+}

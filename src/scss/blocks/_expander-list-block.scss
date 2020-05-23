@@ -1,0 +1,80 @@
+/* SIM PLAN LIST BLOCK */
+/*
+<section class=" block " style="background: #ffffff;">
+    <main class="has-title width-wide " style="background: #ffffff;">
+        ---title---
+        ---abstract---  
+        <section>
+            <section class="expander">
+                <input class="expander-checkbox" type="checkbox" id="expander-list-id-1">
+                <header class="expander-label">
+                    <span>Headline</span>
+                    <label for="expander-list-id-1"><span class="open">ooo</span><span class="close">ccc</span></label>
+                </header>
+                <article class="expander-content">
+                    <p>asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf a</p>
+                </article>
+            </section>
+            --- next expander ---
+        </section>
+        --- link ---
+    </main>
+</section>
+*/
+section.expander-list-block {
+  > main {
+    display: grid;
+    row-gap: pix($block-padding / 2);
+
+    text-align: left;
+    .expander {
+      overflow: hidden;
+      .expander-checkbox {
+        ~ .expander-label {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          cursor: pointer;
+          font-family: $font-family-title;
+          padding: 1em;
+
+          &::after {
+            position: absolute;
+            right: 0;
+            display: inline-flex;
+            @include font-awesome-free;
+            content: "\f107";
+            font-size: 1.25em;
+            margin-right: 1em;
+          }
+        }
+        &:checked {
+          ~ .expander-label {
+            &::after {
+              content: "\f106";
+            }
+          }
+          ~ .expander-content {
+            padding: 0 1em 1em 1em;
+          }
+        }
+      }
+    }
+  }
+}
+section.expander-list-block.mobile {
+  > main {
+    .expander {
+      .expander-checkbox {
+        ~ .expander-label {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          cursor: pointer;
+          font-family: $font-family-title;
+          padding: 1em 2em 1em 1em;
+        }
+      }
+    }
+  }
+}

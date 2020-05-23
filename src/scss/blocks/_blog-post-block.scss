@@ -1,0 +1,30 @@
+/* BLOG POST BLOCK */
+/*
+<main class="has-title width-max">
+  <figure>
+    <img src="" alt="">
+    <figcaption class="wysiwyg">
+      *** WISYWIG
+    </figcaption>
+  </figure>
+</main>
+*/
+.blog-post-block {
+  main {
+    > .subtitle2 {
+      font-size: 1.1em;
+    }
+    > .abstract {
+      font-size: 1em;
+    }
+    img {
+      max-width: 100%;      
+      height: auto;
+    }
+    .share-buttons {
+      > * {
+        display: inline-flex;
+      }
+    }
+  }
+}

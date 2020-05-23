@@ -1,0 +1,207 @@
+/* CONTACT FORM BLOCK */
+/*
+<main class="has-title width-max">
+  <figure>
+    <img src="" alt="">
+    <figcaption class="wysiwyg">
+      *** WISYWIG
+    </figcaption>
+  </figure>
+</main>
+*/
+
+.contact-form-block.desktop {
+  main {
+    > #contactform {
+      display: grid;
+      row-gap: pix($block-padding);
+      column-gap: pix($block-padding);
+      grid-template-columns: repeat(2, 1fr);
+
+      > textarea {
+        grid-column-end: span 2;
+      }
+
+      > label {
+        margin-top: pix(-$block-padding);
+        grid-column-end: span 2;
+        display: flex;
+        flex-direction: row;
+        > a {
+          margin-left: 1em;
+        }
+      }
+
+      > button {
+        grid-column-end: span 2;
+      }
+    }
+  }
+}
+.contact-form-block.mobile {
+  main {
+    > #contactform {
+      display: grid;
+      display: grid;
+      row-gap: 0.5em;
+      width: 100%;
+      margin: auto;
+
+      > textarea {
+        grid-column-end: span 1;
+      }
+
+      > label {
+        margin-top: -0.5em;
+        grid-column-end: span 1;
+        display: flex;
+        flex-direction: column;
+        @include unselectable;
+      }
+
+      > button {
+        grid-column-end: span 1;
+      }
+    }
+  }
+}
+
+.contact-form-block {
+  main {
+    position: relative;
+    > #contactform {
+      position: relative;
+      text-align: left;
+
+      input[type="checkbox"] {
+        width: 0;
+        height: 0;
+        margin-left: 0.5em;
+
+        &::before {
+          display: inline-flex;
+          @include font-awesome-regular;
+          content: "\f0c8";
+          font-size: 1.25em;
+          margin-right: 0.5em;
+          line-height: 2em;
+          vertical-align: middle;
+        }
+
+        &:checked {
+          &::before {
+            content: "\f14a";
+          }
+        }
+        & + label {
+          line-height: 2em;
+          padding-left: 2em;
+          border: 1px solid transparent;
+          border-radius: pix($border-radius-default/4);
+        }
+        &:focus {
+          & + label {
+            border-color: $border-color-dark;
+          }
+        }
+      }
+
+      input:invalid {
+        color: $color3;
+      }
+      .valid {
+        display: none;
+      }
+      .invalid {
+        display: none;
+      }
+      &:valid,
+      &:invalid {
+        select:focus ~ button,
+        input:focus ~ button,
+        textarea:focus ~ button,
+        button:focus {
+          .unfocus {
+            display: none;
+          }
+        }
+      }
+      &:invalid {
+        select:focus ~ button,
+        input:focus ~ button,
+        textarea:focus ~ button,
+        button:focus {
+          .valid {
+            display: none;
+          }
+          .invalid {
+            display: flex;
+          }
+          border-color: $color3;
+          color: $color3;
+          &:hover {
+            background-color: $color3;
+            color: $color-light;
+          }
+        }
+      }
+      &:valid {
+        select:focus ~ button,
+        input:focus ~ button,
+        textarea:focus ~ button,
+        button:focus {
+          .valid {
+            display: flex;
+          }
+          .invalid {
+            display: none;
+          }
+        }
+      }
+    }
+
+    > #contactform-waiting,
+    > #contactform-result {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: pix(-$block-padding);
+      bottom: pix($block-padding);
+      left: pix($block-padding);
+      right: pix($block-padding);
+      border-radius: pix($border-radius-default);
+      border: solid 0.1em $color1;
+      background-color: $color-light;
+      span {
+        margin-right: 1em;
+      }
+    }
+    > #contactform-result {
+      span {
+        margin-right: 1em;
+      }
+    }
+    > #contactform-waiting {
+      > i {
+        font-size: pix($block-padding * 2);
+        animation: rotation 2s infinite linear;
+      }
+
+      @keyframes rotation {
+        from {
+          transform: rotate(359deg);
+        }
+        to {
+          transform: rotate(0deg);
+        }
+      }
+    }
+    > #gdpr-info {
+      padding-top: pix($block-padding);
+      font-size: 0.7em;
+      line-height: 1.2em;
+    }
+  }
+}

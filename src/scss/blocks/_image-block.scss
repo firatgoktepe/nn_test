@@ -1,0 +1,22 @@
+/* IMAGE BLOCK */
+/*
+<main class="has-title width-max">
+  <figure>
+    <img src="" alt="">
+    <figcaption class="wysiwyg">
+      *** WISYWIG
+    </figcaption>
+  </figure>
+</main>
+*/
+.image-block {
+  main {
+    > figure {
+      > figcaption {        
+        margin-top: pix($block-padding / 2);
+        color: $color-light;
+        border: 0;
+      }
+    }
+  }
+}

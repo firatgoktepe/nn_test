@@ -1,0 +1,160 @@
+/* ICON TEXT LIST BLOCK */
+/*
+<main>
+  <article>
+    <h3>sdfg</h3>
+    <span class="has-previous-sibling"><i class="las la-chart-area"></i></span>
+    <div>
+      <p>ca 24% avkastning per år*</p>
+    </div>
+    <a class="text" href="">
+
+      *** a "div"
+      <div>Sample Page</div>
+
+      *** or a "i"
+      <i class="las la-chevron-circle-right"></i>
+
+    </a>
+  </article>
+</main>
+*/
+
+.icon-text-list-block.desktop {
+  &.horizontal {
+    main {
+      display: grid;
+      row-gap: pix($block-padding / 2);
+      column-gap: pix($block-padding / 2);
+    }
+  }
+  &.vertical {
+    main {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-gap: pix($block-padding);
+    }
+  }
+}
+
+.icon-text-list-block.mobile {
+  &.horizontal {
+    main {
+      display: grid;
+      row-gap: 1em;
+      column-gap: 1em;
+    }
+  }
+  &.vertical {
+    main {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 1em;
+    }
+  }
+}
+
+.icon-text-list-block {
+  .subtitle2 {
+    border: solid $color2;
+    width: 100%;
+    background: $color2;
+    > p {
+      margin-bottom: 0;
+      color: $color3;
+      padding: 10px 0;
+    }
+  }
+  main {
+    > span,
+    > article > span {
+      font-size: pix($base-spacing * 3);
+    }
+    > article {
+      > a {
+        display: inline-flex;
+        &.icon {
+          text-decoration: none;
+        }
+      }
+    }
+    h3,
+    > a > i,
+    > article > a > i {
+      font-size: 2em;
+    }
+  }
+  &.horizontal {
+    &.has-border-or-background {
+      main {
+        article {
+          padding: pix($block-padding);
+        }
+      }
+    }
+    main {
+      // grid-template-columns set in code
+      > article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: stretch;
+        overflow: hidden;
+
+        border-radius: pix($border-radius-default);
+        &.border-color1,
+        &.border-light,
+        &.border-color2,
+        &.border-dark {
+          border-width: 0.1em;
+          border-style: solid;
+        }
+        &.border-color1 {
+          border-color: $color1;
+        }
+        &.border-light {
+          border-color: $color-light;
+        }
+        &.border-color2 {
+          border-color: $color2;
+        }
+        &.border-dark {
+          border-color: $color-dark;
+        }
+
+        > span {
+          display: block;
+        }
+        > h3 {
+          font-size: 1.25em;
+        }
+
+        > h3.has-previous-sibling,
+        > span.has-previous-sibling {
+          margin-top: pix($block-padding / 2);
+        }
+        > div.has-previous-sibling,
+        > a.has-previous-sibling {
+          margin-top: pix($block-padding);
+        }
+
+        > div {
+          text-align: center;
+        }
+      }
+    }
+  }
+  &.vertical {
+    main {
+      text-align: left;
+      align-items: center;
+      p {
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+      }
+      > * {
+        justify-self: end;
+      }
+    }
+  }
+}

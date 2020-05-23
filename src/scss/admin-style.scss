@@ -1,0 +1,102 @@
+@import "site/constants.scss";
+@import "site/fonts.scss";
+@import "site/colors.scss";
+@import "site/functions.scss";
+$pix-scale: 0.75;
+
+html.wp-toolbar > body {
+  .acf-range-wrap input[type="number"] {
+    display: block;
+    font-size: 2em;
+    margin-left: 0;
+  }
+  .acf-range-wrap input[type="range"] {
+    display: block;
+    width: 100%;
+  }
+
+  .select2-results,
+  .select2-selection__rendered {
+    hr {
+      display: inline-block;
+      width: 1.4em;
+      height: 1.4em;
+      vertical-align: text-top;
+      padding: 0;
+      margin: 0;
+      border: 1px solid black;
+      border-radius: 2px;
+    }
+  }
+
+  .wp-block {
+    width: 100% !important;
+    max-width: none !important;
+  }
+  .editor-block-list__layout {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    .acf-block-preview::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 11;
+    }
+    .acf-block-preview {
+      @include body;
+      position: relative;
+      z-index: 0;
+      background-color: transparent;
+    }
+
+    .wp-block:first-child {
+      div > .acf-block-preview {
+        padding-top: pix($block-padding);
+
+        #site-header {
+          position: relative;
+        }
+      }
+    }
+  }
+  .acf-block-component.acf-block-body {
+    > div {
+      > .acf-block-preview {
+        padding-right: 0;
+        #site-header,
+        .block {
+          position: relative;
+          @include a-style {
+            color: $color-dark;
+            &.button-style {
+              color: $color-dark;
+            }
+          }
+        }
+        .blog-list-block {
+          main {
+            > nav#blog-pagination {
+              display: none;
+            }
+          }
+        }
+
+        /* SITE */
+        @import "site/normalize.scss";
+        @import "site/root.scss";
+        @import "site/general.scss";
+        /* PARTS */
+        @import "parts/parts.scss";
+        /* BLOCKS */
+        @import "blocks/blocks.scss";
+        /* POSTS */
+        @import "posts/posts.scss";
+      }
+    }
+  }
+}

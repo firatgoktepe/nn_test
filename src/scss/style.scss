@@ -1,0 +1,24 @@
+/*
+Theme Name: nax-nordic
+Author: Firat Goktepe @ Nax
+Author URI: https://naxnordic.com/
+Description: A test theme for new naxnordic site
+Version: 1.0.0;
+*/
+
+/* SITE */
+@import "site/constants.scss";
+@import "site/colors.scss";
+@import "site/fonts.scss";
+@import "site/functions.scss";
+@import "site/normalize.scss";
+@import "site/root.scss";
+@import "site/general.scss";
+/* PARTS */
+@import "parts/parts.scss";
+
+/* BLOCKS */
+@import "blocks/blocks.scss";
+
+/* POSTS */
+@import "posts/posts.scss";

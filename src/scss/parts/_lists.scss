@@ -1,0 +1,57 @@
+/* LISTS */
+.block {
+  ul,
+  ol {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+    margin: 1em 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+    list-style-type: none;
+    padding-left: 2em;
+    li {
+      text-align: left;
+      background-position: left top;
+      background-repeat: no-repeat;
+    }
+  }
+
+  // unordered list
+  ul {
+    li::before {
+      display: inline-flex;
+      @include font-awesome-free;
+      content: "\f00c";
+      line-height: 1em;
+      margin-left: -2em;
+      width: 2em;
+    }
+  }
+
+  // unordered list
+  ol {
+    counter-reset: item;
+    padding-left: 2em;
+    li {
+      counter-increment: item;
+    }
+    li::before {
+      content: counter(item);
+      display: inline-block;
+      background: $color1;
+      color: $color-light;
+      margin-left: -2em;
+      margin-right: 0.9em;
+      font-family: $font-family-title;
+      width: 1.1em;
+      height: 1.1em;
+      line-height: 1.1em;
+      border-radius: 1.1em;
+      text-align: center;
+    }
+  }
+}

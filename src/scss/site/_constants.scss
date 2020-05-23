@@ -1,0 +1,27 @@
+/* CONSTANTS */
+
+// used to scale rem calculations for wp-admin editor
+$pix-scale: 1;
+
+// fonts
+$base-font-size: 16;
+
+// spacing
+$base-spacing: 20;
+
+// transitions
+$transition-medium: 0.3s;
+
+// logo
+$logo-width: 100;
+
+// widths
+$width-desktop-max: 1140;
+$width-desktop-medium: 1000;
+$width-desktop-min: 800;
+
+// borders
+$border-radius-default: $base-spacing;
+
+// blocks
+$block-padding: $base-spacing * 2;

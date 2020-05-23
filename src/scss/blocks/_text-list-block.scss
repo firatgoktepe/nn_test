@@ -1,0 +1,59 @@
+/* TEXT LIST BLOCK */
+/*
+<main class="has-title width-max">
+  <figure>
+    <img src="" alt="">
+    <figcaption class="wysiwyg">
+      *** WISYWIG
+    </figcaption>
+  </figure>
+</main>
+*/
+.text-list-block {
+  main {
+    > article {
+      text-align: left;
+      > h3 {
+        padding-bottom: pix($block-padding / 4);
+      }
+      > div {
+        padding-bottom: pix($block-padding / 4);
+        white-space: pre-wrap;
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+
+.icon-text-list-block {
+  main {
+    > article:nth-child(1) {
+      > div {
+        margin-top: 4rem !important;
+    }
+   }
+    > article:nth-child(5) {
+      > div {
+        margin-top: 1rem !important;
+  }
+ }
+    > article:nth-child(9) {
+      > div {
+        margin-top: 1rem !important;
+   }
+  }
+ }
+}
+
+@media (min-width: 320px) and (max-width: 550px){
+  .icon-text-list-block main > article:nth-child(1) > div,.icon-text-list-block main > article:nth-child(2) > div,
+  .icon-text-list-block main > article:nth-child(3) > div, .icon-text-list-block main > article:nth-child(4) > div,
+  .icon-text-list-block main > article:nth-child(6) > div, .icon-text-list-block main > article:nth-child(7) > div,
+  .icon-text-list-block main > article:nth-child(8) > div{
+    margin-top: 1rem !important;
+  }
+}

@@ -1,0 +1,99 @@
+/* COLORS */
+@mixin a-style {
+  a,
+  a:visited,
+  a:hover,
+  a:active {
+    @content;
+  }
+}
+@mixin text-color-style {
+  @content;
+  a,
+  a:visited,
+  a:hover,
+  a:active {
+    @content;
+  }
+}
+
+$color1: #00677f;
+$color2: #ddcba4;
+$color3: #9b2743;
+$color-light: #ffffff;
+$color-medium:#ededed;
+$color-dark: #333333;
+
+$border-color-light: #d1d1d1;
+$border-color-medium: #818a91;
+$border-color-dark: $color-dark;
+
+// colors
+.color1 {
+  @include text-color-style {
+    color: $color1;
+  }
+}
+.color2 {
+  @include text-color-style {
+    color: $color2;
+  }
+}
+.color3 {
+  @include text-color-style {
+    color: $color3;
+  }
+}
+.color-light {
+  @include text-color-style {
+    color: $color-light;
+  }
+}
+.color-medium {
+  @include text-color-style {
+    color: $color-medium;
+  }
+}
+.color-dark {
+  @include text-color-style {
+    color: $color-dark;
+  }
+}
+
+.background-color1 {
+  background-color: $color1;
+}
+.background-color2 {
+  background-color: $color2;
+}
+.background-color3 {
+  background-color: $color3;
+}
+.background-color-light {
+  background-color: $color-light;
+}
+.background-color-medium {
+  background-color: $color-medium;
+}
+.background-color-dark {
+  background-color: $color-dark;
+}
+
+.border-color1 {
+  border-color: $color1;
+}
+.border-color2 {
+  border-color: $color2;
+}
+.border-color3 {
+  border-color: $color3;
+}
+.border-color-light {
+  border-color: $color-light;
+}
+.border-color-medium {
+  border-color: $color-medium;
+}
+.border-color-dark {
+  border-color: $color-dark;
+}

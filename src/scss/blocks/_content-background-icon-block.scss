@@ -1,0 +1,32 @@
+/* CONTENT BACKGROUND ICON BLOCK */
+/*
+<main class="has-title width-medium has-bottom-link">
+  <article>
+    <i class="las la-hourglass-half"></i>
+    <div>
+      *** wisiwyg
+    </div>
+  </article>
+</main>
+*/
+.content-background-icon-block {
+  main {
+    > article {
+      background-color: $color-light;
+      border-radius: pix($border-radius-default);
+      padding: pix($block-padding);
+      overflow: hidden;
+      position: relative;
+      > div.icon {
+        position: absolute;
+        left: -15%;
+        top: 0;
+        color: $color1;
+      }
+      > div.wysiwyg {
+        color: $color1;
+        border: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+/* IMAGE MEDIA BLOCK */
+/*
+<main class="has-title width-max has-bottom-link" style="">
+    <article>
+        <p>Vill du ha maximal avkastning</p>
+    </article>
+    <figure><img src="" alt=""></figure>
+</main>
+
+*/
+
+.text-media-block.desktop {
+  main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    > article {
+      width: 40%;
+    }
+    > figure {
+      width: 60%;
+    }
+  }
+  &.image-text {
+    main {
+      flex-direction: row;
+      > figure {
+        margin-right: pix($base-spacing * 2);
+      }
+    }
+  }
+  &.text-image {
+    main {
+      flex-direction: row-reverse;
+      > article {
+        margin-right: pix($base-spacing * 2);
+      }
+    }
+  }
+}
+.text-media-block.mobile {
+  main {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    > article {
+      width: 100%;
+    }
+    > figure {
+      width: 100%;
+      margin-bottom: 1em;
+    }
+  }
+  &.image-text {
+    main {
+      > figure {
+        margin-right: 1em;
+      }
+    }
+  }
+  &.text-image {
+    main {
+      > article {
+        margin-right: 1me;
+      }
+    }
+  }
+}
+.text-media-block {
+  main {
+    > article {
+      text-align: left;
+      width: 40%;
+    }
+    > figure {
+      position: relative;
+      overflow: hidden;
+      align-self: stretch;
+      background-repeat: no-repeat;
+      border-radius: pix($border-radius-default);
+      width: 60%;
+      video {
+        border-radius: pix($border-radius-default);
+        position: absolute;
+        max-width: unset;
+        pointer-events: none;
+        &.top {
+          top: 0;
+        }
+        &.middle {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &.bottom {
+          bottom: 0;
+        }
+        &.left {
+          left: 0;
+        }
+        &.center {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        &.right {
+          right: 0;
+        }
+        &.fit-width {
+          left: 0;
+          width: 100%;
+        }
+        &.fit-height {
+          top: 0;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

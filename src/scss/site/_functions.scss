@@ -1,0 +1,36 @@
+/* FUNCTIONS */
+@function pix($pixels) {
+  $size: ($pixels / $base-font-size) * $pix-scale;
+  @return #{$size}rem;
+}
+
+@function em($em) {
+  @return #{$em}em;
+}
+
+@mixin body {
+  // made as mixin to be used in css for admin mode
+  font-family: $font-family-text;
+  font-size: pix($base-font-size);
+  line-height: 1.75em;
+  color: $color-dark;
+  text-align: center;
+  @include a-style {
+    color: $color-dark;
+  }
+}
+
+@mixin border-light($border-width) {
+  border-style: solid;
+  border-width: $border-width;
+  border-color: $border-color-light;
+}
+
+@mixin border-dark($border-width) {
+  border-style: solid;
+  border-width: $border-width;
+  border-color: $border-color-medium;
+  &:focus {
+    border-color: $border-color-dark;
+  }
+}

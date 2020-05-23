@@ -1,0 +1,83 @@
+/* ROOT */
+* {
+  box-sizing: border-box;
+}
+html{
+  font-size: pix($base-font-size);
+}
+body.desktop,
+body.mobile {
+  // made as mixin to be used in css for admin mode
+  @include body;
+}
+#site-main {
+  margin: auto;
+}
+
+// @media screen and (orientation: portrait) {
+
+// }
+// @media screen and (orientation: landscape) {
+
+// }
+
+// html.mobile {
+//   font-size: 10px;
+//   body {
+//     width: 100%;
+//   }
+// }
+
+// @media only screen and (max-width: 768px) {
+//   html.desktop {
+//     font-size: ($base-font-size - 7.5) + px;
+//     body {
+//       width: pix($width-desktop-max);
+//     }
+//   }
+// }
+
+// @media only screen and (min-width: 769px) {
+//   html.desktop {
+//     font-size: 1.1vw;
+//     .block {
+//       width: 100%;
+//     }
+//   }
+// }
+
+// @media only screen and (min-width: 1024px) {
+//   html.desktop {
+//     font-size: 0.984vw;
+//     .block {
+//       width: 100%;
+//     }
+//   }
+// }
+
+// @media only screen and (min-width: 1817px) {
+//   html.desktop {
+//     font-size: ($base-font-size) + px;
+//     .block {
+//       width: (1800) + px;
+//     }
+//   }
+// }
+
+// @media only screen and (min-width: 2017px) {
+//   html.desktop {
+//     font-size: ($base-font-size + 4) + px;
+//     .block {
+//       width: pix($width-desktop-max);
+//     }
+//   }
+// }
+
+// @media only screen and (min-width: 3017px) {
+//   html.desktop {
+//     font-size: ($base-font-size + 8) + px;
+//     .block {
+//       width: pix($width-desktop-max);
+//     }
+//   }
+// }

@@ -1,0 +1,20 @@
+<svg version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient id="linearGradient843" x1=".8499" x2="24.85" y1="-4.051" y2="19.95" gradientTransform="translate(-.8499 4.051)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#001c35" offset="0"/>
+   <stop stop-color="#00325b" offset="1"/>
+  </linearGradient>
+ </defs>
+ <rect x="-1.375e-8" width="24" height="24" ry="0" fill="url(#linearGradient843)" style="paint-order:normal"/>
+ <g transform="translate(-.1017 .2295)" fill="#fff">
+  <rect x="3.927" y="1.775" width="16.35" height="1.736" ry=".237" stroke-width=".5959" style="paint-order:normal"/>
+  <rect x="3.927" y="20.03" width="16.35" height="1.736" ry=".237" stroke-width=".5959" style="paint-order:normal"/>
+  <g transform="translate(-.05085 -.7888)">
+   <path d="m5.384 6.442c-0.1313 0-0.2363 0.105-0.2363 0.2363v11.76c0 0.1313 0.105 0.2363 0.2363 0.2363h13.54c0.1313 0 0.2383-0.105 0.2383-0.2363v-11.76c0-0.1313-0.107-0.2363-0.2383-0.2363h-12.27zm1.498 1.734h10.54v8.766h-10.54z" stroke-width=".5959" style="paint-order:normal"/>
+   <g transform="matrix(.681 0 0 1 3.911 -.2499)" stroke-width=".4389">
+    <rect x="7.638" y="10.36" width="8.871" height="1.736" ry=".237" style="paint-order:normal"/>
+    <rect x="7.694" y="13.52" width="8.871" height="1.736" ry=".237" style="paint-order:normal"/>
+   </g>
+  </g>
+ </g>
+</svg>

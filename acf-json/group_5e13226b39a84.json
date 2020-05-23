@@ -1,0 +1,131 @@
+{
+    "key": "group_5e13226b39a84",
+    "title": "Block - Newsletter Registration",
+    "fields": [
+        {
+            "key": "field_5e13226b40f45",
+            "label": "Form Type",
+            "name": "form_type",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "mailchimp_newsletter": "Mailchimp Newsletter"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "mailchimp_newsletter",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5e13226b40bcb",
+            "label": "Audience ID",
+            "name": "audience_id",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e13226b40f45",
+                        "operator": "==",
+                        "value": "mailchimp_newsletter"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e1324dda04cb",
+            "label": "Subscribe Text",
+            "name": "subscribe_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Prenumerera",
+            "placeholder": "Set text for the subscribe button",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e13253ea04cd",
+            "label": "Email Placeholder Text",
+            "name": "email_placeholder_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Skriv din email här",
+            "placeholder": "Set text for the email placeholder",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e13274742a1e",
+            "label": "Thank You Message",
+            "name": "thank_you_message",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Tack för att du valde att prenumerera på vårt nyhetsbrev!",
+            "placeholder": "Thank you message for subscription",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/newsletter-block"
+            }
+        ]
+    ],
+    "menu_order": 150,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1589973820
+}

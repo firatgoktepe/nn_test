@@ -1,0 +1,57 @@
+/* IMAGE BLOCK */
+/*
+<main class="has-title width-max">
+  <figure>
+    <img src="" alt="">
+    <figcaption class="wysiwyg">
+      *** WISYWIG
+    </figcaption>
+  </figure>
+</main>
+*/
+.image-block {
+  main {
+    > figure {
+      > figcaption {        
+        margin-top: pix($block-padding / 2);
+        color: $color-light;
+        border: 0;
+      }
+    }
+  }
+}
+
+section.text-block {
+  display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    padding: 0.6rem;
+    padding-top: 3rem;
+    > main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #E4CE9B;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    padding: 0.6rem !important;
+    > p {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 600;
+      > a {
+        text-decoration: none;
+      }
+    }
+  }
+  @media (min-width: 320px) and (max-width: 550px){
+    p {
+      text-align: center !important;
+      font-size: 14px !important;
+    }
+  }
+}

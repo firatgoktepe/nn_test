@@ -1,0 +1,25 @@
+<svg version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<linearGradient id="linearGradient843" x1=".8499" x2="24.85" y1="-4.051" y2="19.95" gradientTransform="translate(-.8499 4.051)" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#001c35" offset="0"/>
+			<stop stop-color="#00325b" offset="1"/>
+		</linearGradient>
+	</defs>
+	<rect x="2.496e-9" width="24" height="24" ry="0" fill="url(#linearGradient843)" style="paint-order:normal"/>
+	<g fill="#fff" stroke-width=".5822">
+		<rect transform="rotate(90)" x="2.1979" y="-12.691" width="19.604" height="1.382" ry=".18867" style="paint-order:normal"/>
+		<rect x="2.1979" y="11.309" width="19.604" height="1.382" ry=".18867" style="paint-order:normal"/>
+	</g>
+	<rect x="14.503" y="2.1979" width="7.2992" height="6.9275" ry=".94497" fill="#fff" stroke-width=".79541" style="paint-order:normal"/>
+	<rect x="2.1979" y="14.875" width="7.2992" height="6.9275" ry=".94497" fill="#fff" stroke-width=".79541" style="paint-order:normal"/>
+	<g transform="translate(-.17797 -.066615)" fill="#fff" stroke-width=".35525">
+		<rect x="2.3758" y="2.2645" width="7.2992" height="1.382" ry=".18867" style="paint-order:normal"/>
+		<rect x="2.3758" y="7.81" width="7.2992" height="1.382" ry=".18867" style="paint-order:normal"/>
+		<rect x="2.3758" y="5.0372" width="7.2992" height="1.382" ry=".18867" style="paint-order:normal"/>
+	</g>
+	<g transform="translate(12.127 12.61)" fill="#fff" stroke-width=".35525">
+		<rect x="2.3758" y="2.2645" width="7.2992" height="1.382" ry=".18867" style="paint-order:normal"/>
+		<rect x="2.3758" y="7.81" width="7.2992" height="1.382" ry=".18867" style="paint-order:normal"/>
+		<rect x="2.3758" y="5.0372" width="7.2992" height="1.382" ry=".18867" style="paint-order:normal"/>
+	</g>
+</svg>

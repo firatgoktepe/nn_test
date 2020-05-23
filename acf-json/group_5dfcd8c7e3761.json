@@ -1,0 +1,46 @@
+{
+    "key": "group_5dfcd8c7e3761",
+    "title": "Block Part - Block Header End Accordion",
+    "fields": [
+        {
+            "key": "field_5dfcd8da26566",
+            "label": "Block Header End Accordion",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "all"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/blog-post-block"
+            }
+        ]
+    ],
+    "menu_order": 109,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1589973819
+}

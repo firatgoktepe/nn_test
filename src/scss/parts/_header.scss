@@ -1,0 +1,133 @@
+/* HEADER */
+$company-menu-height: 45;
+$sticky-menu-height: 51;
+.admin-bar {
+  #site-header.desktop {
+    top: pix(-13);
+  }
+}
+#site-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: pix(-45);
+  z-index: 1;
+
+  height: pix($company-menu-height + $sticky-menu-height);
+
+  background-color: white;
+  transition: $transition-medium;
+
+  font-size: pix(12);
+  line-height: pix(12);
+
+  a,
+  i {
+    display: flex;
+  }
+
+  > .company-info {
+    background-color: black;
+    > div {
+      display: flex;
+      align-items: center;
+
+      height: pix($company-menu-height);
+
+      @include text-color-style {
+        color: $color-light;
+        text-decoration: none;
+      }
+
+      > a {
+        margin-right: pix(25);
+        i {
+          font-size: pix(14);
+          margin-right: pix(10);
+        }
+        &:hover {
+          @include text-color-style {
+            color: $color2;
+          }
+        }
+      }
+
+      .company-menu {
+        flex-grow: 1;
+      }
+    }
+  }
+  > .sticky-menu > section {
+    display: flex;
+    flex-direction: row;
+
+    background-color: white;
+
+    max-width: pix($width-desktop-max);
+    margin: auto;
+    height: pix($sticky-menu-height);
+    line-height: pix($sticky-menu-height);
+
+    .logo {
+      transition: $transition-medium;
+      position: relative;
+      a {
+        display: flex;
+        height: 100%;
+        align-items: center;
+      }
+      img {
+        width: pix($logo-width);
+        height: auto;
+      }
+    }
+  }
+}
+
+#site-header.desktop {
+  > .company-info {
+    > div {
+      justify-content: flex-start;
+      max-width: pix($width-desktop-max);
+      margin: auto;
+
+      .company-menu {
+        flex-grow: 1;
+      }
+    }
+  }
+  > .sticky-menu section {
+    .logo {
+      img {
+        //width: pix($logo-width);
+        width: 3.25rem; 
+        height: auto;
+      }
+    }
+  }
+}
+
+#site-header.mobile {
+  > .company-info {
+    > div {
+      justify-content: center;
+      width: 100%;
+
+      .company-menu {
+        flex-grow: 1;
+      }
+    }
+  }
+  > .sticky-menu section {
+    .logo {
+      height: pix($sticky-menu-height);
+      line-height: pix($sticky-menu-height);
+      position: absolute;
+      z-index: 1;
+      padding-left: pix(20);
+      img {
+        width: pix($logo-width);
+        height: auto;
+      }
+    }
+  }
+}

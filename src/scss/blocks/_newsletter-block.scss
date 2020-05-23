@@ -1,0 +1,65 @@
+/* NEWSLETTER BLOCK */
+/*
+<main class="has-title width-max">
+  <figure>
+    <img src="" alt="">
+    <figcaption class="wysiwyg">
+      *** WISYWIG
+    </figcaption>
+  </figure>
+</main>
+*/
+
+.newsletter-block.desktop {
+  main {
+    > #mailchimp {
+    }
+  }
+}
+.newsletter-block.mobile {
+  main {
+    > #mailchimp {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      > * {
+        margin: 1em 0;
+      }
+    }
+  }
+}
+
+.newsletter-block {
+  main {
+    > #mailchimp {
+      > input {
+        margin-right: 1em;
+      }
+      > input[type="email"] {
+        width: 20em;
+      }
+    }
+    > #mailchimp-result {
+      height: pix($block-padding * 2);
+      span {
+        margin-right: 1em;
+      }
+    }
+    > #mailchimp-waiting {
+      height: pix($block-padding * 2);
+      font-size: pix($block-padding * 2);
+      > i {
+        animation: rotation 2s infinite linear;
+      }
+
+      @keyframes rotation {
+        from {
+          transform: rotate(359deg);
+        }
+        to {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+}
