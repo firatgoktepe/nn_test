@@ -3,7 +3,9 @@
 section.hero-block {
   width: 100%;
   position: relative;
-
+  @media (min-width: 500px){
+  margin-bottom: 6rem;
+  }
   > figure {
     margin: 0;
     padding: 0;

@@ -12,12 +12,16 @@
  */
 ?>
 
-<?php 
+<?php
+
+$title = get_field('title'); 
 
 $post_objects = get_field('blog_post');
 
 if( $post_objects ): ?>
     <section class='block blog-post-block <?php echo get_device_type(); ?>'>
+      <h2><?php echo $title; ?></h2>
+      <hr>
       <main>  
     <?php foreach( $post_objects as $post): ?>
      <?php setup_postdata($post); ?>

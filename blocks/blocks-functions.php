@@ -68,7 +68,7 @@ function the_block_title($title_tag = 'h2')
 
     $block_title = get_field('block_title');
     if ($block_title) {
-        echo '<' . $title_tag . '>' . get_textarea_esc($block_title) . '</' . $title_tag . '>';
+        echo '<' . $title_tag . '>' . get_textarea_esc($block_title) . '</' . $title_tag . '><hr>';
     }
 }
 function the_block_subtitle($subtitle_class = 'subtitle2')
