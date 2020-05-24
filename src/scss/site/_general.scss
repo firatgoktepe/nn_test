@@ -77,11 +77,13 @@ h6 {
   display: inline-flex;
   justify-content: center;
   text-align: center;
-  text-transform: uppercase;
-  color: $color1;
+  //text-transform: uppercase;
+  //color: $color1;
+  color: $color-nax;
   background-color: $color-light;
   padding: pix(12) pix(24);
-  border: 1px solid $color1;
+  //border: 1px solid $color1;
+  font-size: 20px;
   border-radius: pix(10);
   text-decoration: none;
   font-weight: $font-weight-medium;
@@ -90,6 +92,11 @@ h6 {
   &:hover {
     color: $color-light;
     background-color: $color1;
+  }
+  i.fa-arrow-alt-circle-right {
+    font-size: 23px;
+    margin: auto;
+    margin-left: 5px;
   }
   > * {
     display: flex;

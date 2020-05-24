@@ -36,6 +36,16 @@
 }
 
 .grid-block {
+    h2 {
+      margin-top: 5rem;
+      padding-bottom: 2.5rem;
+    }
+    hr {
+    
+    width: 5%;
+    border-top: 2px solid $color-nax;
+   }
+
   > main {
     .rounded {
       border-radius: pix($border-radius-default);
@@ -55,7 +65,10 @@
         padding-bottom: pix($block-padding * 2);
         padding-left: 1em;
         padding-right: 1em;
-        white-space: pre-wrap;
+        //white-space: pre-wrap;
+        span.author_name{
+          color: $color-nax;
+        }
       }
       > figure {
         width: 100%;

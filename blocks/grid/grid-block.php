@@ -16,6 +16,7 @@ require_once get_template_directory() . '/blocks/blocks-functions.php';
 $items_per_row = (int) get_field('items_per_row');
 $item_shape = get_field('item_shape');
 
+
 if ($items_per_row > 0 && !wp_is_mobile()) {
     $grid_template_columns = "grid-template-columns: repeat({$items_per_row}, 1fr);";
 } else {
@@ -70,8 +71,11 @@ while (have_rows('items')) {
             }
             break;
     }
+    
     $html .= "</article>";
     echo $html;
 }
 
 the_block_footer();
+
+

@@ -117,7 +117,7 @@ function the_block_bottom_link()
         $link_target = ' target="_blank" rel="noopener" rel="noreferrer"';
     }
     if ($link_title && $url) {
-        echo "<a class='button-style' href='{$url}' {$link_target}>{$link_title}</a>";
+        echo "<a class='button-style' href='{$url}' {$link_target}>{$link_title}<i class='far fa-arrow-alt-circle-right'></i></a>";
     }
 }
 
