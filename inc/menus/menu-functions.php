@@ -18,7 +18,7 @@ function the_company_menu()
 
 function the_header_menu()
 {
-    if (wp_is_mobile()) {
+    if (wp_is_mobile() or !wp_is_mobile()) {
         $menu = create_menu_hierarchy('header-menu');
         $html = create_expander_menu_html($menu, 2, false);
         if (!$html) {
@@ -39,7 +39,7 @@ function the_header_menu()
 }
 function the_footer_menu()
 {
-    if (wp_is_mobile()) {
+    if (wp_is_mobile() or !wp_is_mobile()) {
         $menu = create_menu_hierarchy('footer-menu');
         $html = create_expander_menu_html($menu, 1, false);
         if (!$html) {
@@ -62,7 +62,7 @@ function the_side_menu($side_menu_tag = '')
     $parent = get_field('side_menu_parent_page', $id);
     $menu = get_menu_by_parent($parent, 'page', array('publish'));
 
-    if (wp_is_mobile()) {
+    if (wp_is_mobile() or !wp_is_mobile()) {
         $html = create_expander_menu_html($menu, 5, true, 1);
     } else {
         $html = create_expander_menu_html($menu, 5, true);
@@ -71,7 +71,7 @@ function the_side_menu($side_menu_tag = '')
         return '';
     }
 
-    if (wp_is_mobile()) {
+    if (wp_is_mobile() or !wp_is_mobile()) {
         if (!$parent) {
             $homepage_id = get_option('page_on_front');
             $parent = get_post($homepage_id);
