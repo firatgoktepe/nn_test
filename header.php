@@ -14,24 +14,7 @@ function the_theme_header()
 {
 ?>
 	<header id="site-header" class="<?php the_device_type(); ?>">
-		<section class="company-info">
-			<div>
-				<?php while (have_rows('contact_info', 'option')) : the_row();
-					$mail = get_sub_field('mail');
-					$phone = get_sub_field('phone');
-				?>
-					<a href="tel:<?php echo $phone; ?>" target="_blank" rel='noopener' rel='noreferrer'>
-						<i class="fas fa-phone"></i>
-						<span><?php echo $phone; ?></span>
-					</a>
-					<a href="mailto:<?php echo $mail; ?>" target="_blank" rel='noopener' rel='noreferrer'>
-						<i class="far fa-envelope"></i>
-						<span><?php echo $mail; ?></span>
-					</a>
-				<?php endwhile; ?></nav>
-				<?php the_company_menu(); ?>
-			</div>
-		</section>
+
 		<section class="sticky-menu">
 			<section>
 				<?php the_logo(); ?>
