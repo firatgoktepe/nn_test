@@ -44,12 +44,12 @@ function nax_register_post_type($cpt_name, $cpt_singular, $cpt_plural, $cpt_doma
             'parent_item_colon' => __('Parent ' . $cpt_singular . ':', $cpt_domain),
             'menu_name' => __($cpt_plural, $cpt_domain),
         ),
-        'public' => false,
+        'public' => true,
         'publicly_queryable' => true,
         'hierarchical' => false,
         'show_ui' => true,
         'show_in_nav_menus' => true,
-        'supports' => array('title'),
+        'supports' => array('title', 'editor', 'custom-fields', 'excerpt', 'thumbnail'),
         'has_archive' => false,
         'rewrite' => true,
         'query_var' => true,
@@ -60,6 +60,12 @@ function nax_register_post_type($cpt_name, $cpt_singular, $cpt_plural, $cpt_doma
         'rest_controller_class' => 'WP_REST_Posts_Controller',
     ));
 }
+
+
+// // My Post Types News and Blog
+
+nax_register_post_type('News', 'news', 'News', 'nax-nordic', 'dashicons-admin-site-alt');
+nax_register_post_type('Blog', 'blog', 'Blog', 'nax-nordic', 'dashicons-admin-site-alt3');
 
 
 // Add the custom columns to the custom post type:

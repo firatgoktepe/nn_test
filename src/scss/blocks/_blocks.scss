@@ -73,6 +73,12 @@
       width: 100%;
     }
   }
+
+  video {
+    &.middle {
+      top: 50% !important;
+    }
+  }
 }
 
 .block {
@@ -109,8 +115,9 @@
         top: 0;
       }
       &.middle {
-        top: 50%;
+        top: 20%;
         transform: translateY(-50%);
+        height: 100%;
       }
       &.bottom {
         bottom: 0;
@@ -142,7 +149,7 @@
   &.has-title {
     > header {
       padding-top: pix($block-padding * 2);
-      padding-bottom: pix($block-padding);
+      // padding-bottom: pix($block-padding);
       h1,
       h2 {
         margin-bottom: pix($base-spacing);

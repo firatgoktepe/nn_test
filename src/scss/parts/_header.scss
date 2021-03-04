@@ -3,13 +3,13 @@ $company-menu-height: 45;
 $sticky-menu-height: 51;
 .admin-bar {
   #site-header.desktop {
-    top: pix(-13);
+    // top: pix(-13);
   }
 }
 #site-header {
   position: -webkit-sticky;
-  position: sticky;
-  top: pix(-45);
+  position: absolute;
+  top: 80px;
   z-index: 1;
 
   height: pix($company-menu-height + $sticky-menu-height);
