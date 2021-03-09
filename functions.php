@@ -72,7 +72,7 @@ function wpdocs_remove_menus()
 }
 add_action('admin_menu', 'wpdocs_remove_menus');
 
-// Limit default blocks
+// Limited default blocks
 
 // function limit_blocks($allowed_blocks)
 // {
