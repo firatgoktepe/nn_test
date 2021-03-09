@@ -72,33 +72,35 @@ function wpdocs_remove_menus()
 }
 add_action('admin_menu', 'wpdocs_remove_menus');
 
-function limit_blocks($allowed_blocks)
-{
+// Limited default blocks
 
-    // get widget blocks and registered by plugins blocks
-    $registered_blocks = WP_Block_Type_Registry::get_instance()->get_all_registered();
+// function limit_blocks($allowed_blocks)
+// {
 
-    $block_names_to_remove = array();
-    foreach ($registered_blocks as $block) {
-        if (startsWith($block->name, 'core')) {
-            array_push($block_names_to_remove, $block->name);
-        }
-    }
+//     // get widget blocks and registered by plugins blocks
+//     $registered_blocks = WP_Block_Type_Registry::get_instance()->get_all_registered();
 
-    foreach ($block_names_to_remove as $block_name) {
-        unset($registered_blocks[$block_name]);
-    }
+//     $block_names_to_remove = array();
+//     foreach ($registered_blocks as $block) {
+//         if (startsWith($block->name, 'core')) {
+//             array_push($block_names_to_remove, $block->name);
+//         }
+//     }
 
-    // now $registered_blocks contains only blocks registered by plugins, but we need keys only
-    $registered_blocks = array_keys($registered_blocks);
+//     foreach ($block_names_to_remove as $block_name) {
+//         unset($registered_blocks[$block_name]);
+//     }
 
-    // merge the whitelist with plugins blocks
-    return array_merge(array(
-        // add blocks to keep
-        'core/block',         // to keep reusable block function
-    ), $registered_blocks);
-}
-add_filter('allowed_block_types', 'limit_blocks');
+//     // now $registered_blocks contains only blocks registered by plugins, but we need keys only
+//     $registered_blocks = array_keys($registered_blocks);
+
+//     // merge the whitelist with plugins blocks
+//     return array_merge(array(
+//         // add blocks to keep
+//         'core/block',         // to keep reusable block function
+//     ), $registered_blocks);
+// }
+// add_filter('allowed_block_types', 'limit_blocks');
 
 /**
  * Enqueue scripts and styles.
