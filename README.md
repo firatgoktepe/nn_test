@@ -1,4 +1,4 @@
 # nn_test
-A test site 
+A wordpress test site 
 
 Test wordpress theme from scratch for Nax-Nordic Company
